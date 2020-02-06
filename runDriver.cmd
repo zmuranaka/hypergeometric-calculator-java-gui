@@ -5,8 +5,8 @@
 :: prevents the commands from being echoed to the screen
 @echo off
 cd bin
-:: deletes all of the previous class files
-del *.class
+:: deletes all of the previous class files if there are any
+if exist *.class del *.class
 cd ../src
 :: compiles all of the src files
 javac *.java
