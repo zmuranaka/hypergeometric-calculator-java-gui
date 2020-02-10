@@ -21,8 +21,10 @@ Driver.java
 &nbsp;&nbsp;&nbsp;&nbsp;This is the Driver class that actually runs the program. It is a very small class, since I have offloaded the creation of the GUI into the GUI class and all of the calculations into the Deck class.  
 GUI.java  
 &nbsp;&nbsp;&nbsp;&nbsp;This class contains the entire GUI for the program. Anything you see on the screen is located in this class. The Driver class creates an object of this class.  
+compileAndRun.cmd  
+&nbsp;&nbsp;&nbsp;&nbsp;This is a simple command prompt script I wrote because I was compiling and running the project from the command prompt, and I was often reusing the same commands. Running this script recompiles the project and then runs the Driver class. Note: the Driver src file must be named Driver.java in order for this script to work properly. Similarly, the .class files must be in the bin directory, and the the .java files must be in the src directory.  
 runDriver.cmd  
-&nbsp;&nbsp;&nbsp;&nbsp;This is a simple command prompt script I wrote because I was compiling and running the program from the command prompt, and I was often reusing the same commands. Running this file runs the program. Note: the Driver file MUST be named Driver in order for this program to work properly. Similarly, the .class files must be in the bin directory, and the the .java files must be in the src directory.
+&nbsp;&nbsp;&nbsp;&nbsp;This is a simple command prompt script I wrote that is similar to compileAndRun.cmd, except it does not recompile the program. Running this script simply runs the Driver class. Note: the Driver.class file must be in the bin directory for this script to work properly.
 
 ## Sources:
 
