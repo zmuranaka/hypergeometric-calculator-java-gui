@@ -2,7 +2,22 @@
 
 ## What is this Project?
 
-This project is the GUI version of the console hypergeometric calculator I wrote, which I have been off-and-on working on since I was a senior in high school. I have been fascinated with hypergeometric distributions for years, since I play many card games, and hypergeometric distributions can be used to find the probability of drawing certain combinations of cards out of a deck. I traditionally just went to [Stat Trek](https://stattrek.com/online-calculator/hypergeometric.aspx) to solve hypergeometric distributions, but after looking into the math involved, I realized that it is not actually too difficult. Over the course of a few days, I wrote a hypergeometric calculator program on my TI-84 Plus C Silver Edition. This was not too hard, as the TI-84 can automatically handle a lot of the calculations with its built-in math functions. However, around the same time I was learning the basics of Java in my computer programming class, and I decided that it wouldn't be too hard to port the program over to Java. That year, as a senior in high school, I completed my first version of the console program. About a year later, in my first semester of college, after learning the basics of java GUI programming, I decided to write a GUI version for my hypergeometric calculator. Over a year later, here we are.
+This project is a hypergeometric calculator GUI. A hypergeometric calculator can determine the probability to get a desired number of successes out of a number of draws from a population without replacement. For example, if you have a standard deck of playing cards, and you want to determine the probability that you get all four aces out of a hand of five cards, a hypergeometric calculator can solve that.
+
+## How do I use the Program?
+
+All you need to do is provide the population size, population successes, sample size, and desired successes, and then click the 'Calculate' button, and the calculator will tell you what the probability is.
+
+## What do the Variables Mean?
+
+Population size  
+&nbsp;&nbsp;&nbsp;&nbsp;Population size means the total number of individuals in the population. For example, in a standard deck of cards there are 52 cards, so the population size is 52.  
+Population successes  
+&nbsp;&nbsp;&nbsp;&nbsp;Population successes means the number of "successes" in the entire population. For example, if you are looking for diamonds out of a standard deck of cards, there are 13 diamonds in a standard deck. Therefore, the population successes is 13.  
+Sample size  
+&nbsp;&nbsp;&nbsp;&nbsp;Sample size means the number of draws you are taking from the population. For example, a standard poker hand is 5 cards, so if you are looking for the probability you get a certain number of successes from a standard poker hand, the sample size is 5.  
+Desired successes  
+&nbsp;&nbsp;&nbsp;&nbsp;Desired successes means the number of "successes" you would like to draw in your sample size. For example, if you are looking for the probability of getting all four aces in a standard poker hand, the desired successes is 4.
 
 ## Directories:
 
