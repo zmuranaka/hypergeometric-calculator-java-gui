@@ -24,7 +24,7 @@ Desired successes
 bin  
 &nbsp;&nbsp;&nbsp;&nbsp;This folder contains all of the compiled classes.  
 lib  
-&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the jar (java archive) of the project. Running the jar runs the program.  
+&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the jar (java archive) of the project.    
 src  
 &nbsp;&nbsp;&nbsp;&nbsp;This folder contains all of the source code.
 
