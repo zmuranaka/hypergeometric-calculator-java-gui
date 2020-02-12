@@ -24,7 +24,7 @@ Desired successes
 bin  
 &nbsp;&nbsp;&nbsp;&nbsp;This folder contains all of the compiled classes.  
 lib  
-&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the jar (java archive) of the project. Running the jar runs the program.  
+&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the jar (java archive) of the project.  
 src  
 &nbsp;&nbsp;&nbsp;&nbsp;This folder contains all of the source code.
 
@@ -43,9 +43,9 @@ runDriver.cmd
 
 ## Sources:
 
-I wrote the vast majority of code myself, and as such it may have places where it could be simplified, improved, or is just plain confusing. However, there are some sources I did take small chunks of code from or take inspiration from:  
+Websites that helped me create the project:  
 https://stattrek.com/online-calculator/hypergeometric.aspx  
-&nbsp;&nbsp;&nbsp;&nbsp;I did not take any code from this page, but essentially the entire inspiration of the project came from this website. My program is laid out very similarly, from the order the information is asked to how it is displayed. I also used this website when checking that my program was coming up with the correct numbers.  
+&nbsp;&nbsp;&nbsp;&nbsp;The inspiration of the project came from this website. My program is laid out very similarly, from the order the information is asked to how it is displayed. I also used this website when checking that my program was coming up with the correct numbers.  
 https://www.geeksforgeeks.org/program-to-calculate-the-value-of-ncr-efficiently/  
 &nbsp;&nbsp;&nbsp;&nbsp;This page was very helpful when trying to find out how to calculate the combination of n and r without overflowing the long data type. It is still not a perfect solution, but it is much better than what I had come up with.  
 https://smallbusiness.chron.com/write-cmd-script-53226.html  
