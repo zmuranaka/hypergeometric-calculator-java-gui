@@ -16,7 +16,7 @@ public class Deck
 	/*
 	 * We need double versions of all of the above variables except for sampleSize
 	 * These are necessary because there are times when we will need to treat the variables as doubles
-	 * For example, in the probability() function we treat the variables as doubles
+	 * For example, in the probability() method we treat the variables as doubles
 	 * However, we do not want to allow the user to enter doubles when creating the object
 	 */
 	private double dpopSize;
@@ -119,7 +119,7 @@ public class Deck
 	 * Calculates a combination of sampleSize and desiredSuccesses
 	 * The equation for nCr is (n!) / ((r!) * (n - r)!)
 	 * This can be simplified to n * (n - 1) * (n - 2) * ... * (n - r + 1) / r!
-	 * This function calculates nCr using this simplified equation
+	 * This method calculates nCr using this simplified equation
 	 * n = sampleSize and r = desiredSuccesses
 	 */
 	public long ncr(long n, long r)
@@ -215,34 +215,16 @@ public class Deck
 	}
 
 	// The following six methods are accessor methods for double versions of variables
-	public double getdpopSize()
-	{
-		return dpopSize;
-	}
+   public double getdpopSize(){ return dpopSize; }
 
-	public double getdpopSuccesses()
-	{
-		return dpopSuccesses;
-	}
+   public double getdpopSuccesses(){ return dpopSuccesses; }
 
-	public double getddesiredSuccesses()
-	{
-		return ddesiredSuccesses;
-	}
+   public double getddesiredSuccesses(){ return ddesiredSuccesses; }
 
-	public double getdpopFailures()
-	{
-		return dpopFailures;
-	}
+   public double getdpopFailures(){ return dpopFailures; }
 
-	public double getdsampleFailures()
-	{
-		return dsampleFailures;
-	}
+   public double getdsampleFailures(){ return dsampleFailures; }
 
-	public long getcombination()
-	{
-		return combination;
-	}
+   public long getcombination(){ return combination; }
 
 }
