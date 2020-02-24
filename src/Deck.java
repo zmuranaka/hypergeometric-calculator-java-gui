@@ -210,20 +210,20 @@ public class Deck
 			iChance = iChance * combination;
 			exactChance += iChance;
 		}
-      
+  
 		return exactChance;
 	}
 
 	// The following six methods are accessor methods for double versions of variables
-   public double getdpopSize(){ return dpopSize; }
+	public double getdpopSize(){ return dpopSize; }
 
-   public double getdpopSuccesses(){ return dpopSuccesses; }
+	public double getdpopSuccesses(){ return dpopSuccesses; }
 
-   public double getddesiredSuccesses(){ return ddesiredSuccesses; }
+	public double getddesiredSuccesses(){ return ddesiredSuccesses; }
 
-   public double getdpopFailures(){ return dpopFailures; }
+	public double getdpopFailures(){ return dpopFailures; }
 
-   public double getdsampleFailures(){ return dsampleFailures; }
+	public double getdsampleFailures(){ return dsampleFailures; }
 
-   public long getcombination(){ return combination; }
+	public long getcombination(){ return combination; }
 }

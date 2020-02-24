@@ -10,11 +10,11 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GUI extends JPanel
-{   
+{
 	static final long serialVersionUID = 1L; // Visual Studio Code said that I need this
-   
+
 	// Window components
-	private JFrame window = new JFrame("Hypergeometric Calculator");  
+	private JFrame window = new JFrame("Hypergeometric Calculator");
 	private JLabel lblPopSize = new JLabel("Population Size: ");
 	private JTextField txtPopSize = new JTextField("");
 	private JLabel lblPopSuccesses = new JLabel("Population Successes: ");
@@ -34,7 +34,7 @@ public class GUI extends JPanel
 	public GUI()
 	{
 		setLayout(null); // No layout is set
-      
+
 		// Set x, y, width, height
 		lblPopSize.setBounds(40, 20, 300, 40);
 		lblPopSize.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
@@ -45,20 +45,20 @@ public class GUI extends JPanel
 		lblPopSuccesses.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
 		txtPopSuccesses.setBounds(360, 100, 100, 40);
 		txtPopSuccesses.setFont(new Font("Serif", Font.PLAIN, 28));
-      
+
 		lblSampleSize.setBounds(40, 180, 300, 40);
 		lblSampleSize.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
 		txtSampleSize.setBounds(360, 180, 100, 40);
 		txtSampleSize.setFont(new Font("Serif", Font.PLAIN, 28));
-      
+
 		lblDesiredSuccesses.setBounds(40, 260, 300, 40);
 		lblDesiredSuccesses.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
 		txtDesiredSuccesses.setBounds(360, 260, 100, 40);
 		txtDesiredSuccesses.setFont(new Font("Serif", Font.PLAIN, 28));
-      
+
 		btnCalc.setBounds(40, 340, 200, 40);
 		btnCalc.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
-      
+
 		lblExactChance.setBounds(40, 420, 900, 40);
 		lblExactChance.setFont(new Font("Sans-Serif", Font.PLAIN, 28));
 		lblLess.setBounds(40, 480, 900, 40);
@@ -90,7 +90,7 @@ public class GUI extends JPanel
 		window.setSize(1000, 800); // Set the window size
 		window.setVisible(true); // Allow the window to be seen
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // The application ends when the red 'X' is clicked
-      
+
 		// Triggers when btnCalc is pressed
 		btnCalc.addActionListener(new ActionListener()
 		{
@@ -110,7 +110,7 @@ public class GUI extends JPanel
 				}
 			}
 		});
-      
+
 	}
 	
 	// Displays the results of the hypergeometric distribution
@@ -126,7 +126,7 @@ public class GUI extends JPanel
 		double orGreaterInclusiveChance = orGreaterDeck.orGreater(orGreaterExactChance); // Chance of getting desired successes or greater
 		orLessExactChance *= orLessDeck.getcombination(); // Chance of getting exactly desired successes
 		double orLessInclusiveChance = orLessDeck.orLess(orLessExactChance); // Chance of getting desired successes or less
-      
+
 		lblExactChance.setText("Chance of exactly desired successes: " + orGreaterExactChance);
 		lblLess.setText("Chance of less than desired successes: " + (orLessInclusiveChance - orLessExactChance));
 		lblOrInclusiveLess.setText("Chance of desired successes or less: " + orLessInclusiveChance);
