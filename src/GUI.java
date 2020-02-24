@@ -114,7 +114,7 @@ public class GUI extends JPanel
 	}
 	
 	// Displays the results of the hypergeometric distribution
-	public void displayResults(long popSize, long popSuccesses, long sampleSize, long desiredSuccesses)
+	private void displayResults(long popSize, long popSuccesses, long sampleSize, long desiredSuccesses)
 	{
 		Deck orGreaterDeck = new Deck(popSize, popSuccesses, sampleSize, desiredSuccesses);
 		Deck orLessDeck = new Deck(orGreaterDeck);
@@ -135,7 +135,7 @@ public class GUI extends JPanel
 	}
 	
 	// Runs when the user enters invalid input
-	public void formatError()
+	private void formatError()
 	{
 		lblExactChance.setText("Input not valid.");
 		lblLess.setText("Try again.");
