@@ -11,7 +11,7 @@ import java.awt.event.*;
 
 public class GUI extends JPanel
 {
-    static final long serialVersionUID = 1L; // Visual Studio Code said that I need this
+    static final long serialVersionUID = 1L;
 
     // Window components
     private JFrame window = new JFrame("Hypergeometric Calculator");
@@ -116,22 +116,13 @@ public class GUI extends JPanel
     // Displays the results of the hypergeometric distribution
     private void displayResults(long popSize, long popSuccesses, long sampleSize, long desiredSuccesses)
     {
-        Deck orGreaterDeck = new Deck(popSize, popSuccesses, sampleSize, desiredSuccesses);
-        Deck orLessDeck = new Deck(orGreaterDeck);
-        
-        // The next next six statements calculate probabilities for the Decks
-        double orGreaterExactChance = orGreaterDeck.probability(orGreaterDeck.getdpopSize(), orGreaterDeck.getdpopSuccesses(), orGreaterDeck.getddesiredSuccesses(), orGreaterDeck.getdpopFailures(), orGreaterDeck.getdsampleFailures());
-        double orLessExactChance = orLessDeck.probability(orLessDeck.getdpopSize(), orLessDeck.getdpopSuccesses(), orLessDeck.getddesiredSuccesses(), orLessDeck.getdpopFailures(), orLessDeck.getdsampleFailures());
-        orGreaterExactChance *= orGreaterDeck.getcombination(); // Chance of getting exactly desired successes
-        double orGreaterInclusiveChance = orGreaterDeck.orGreater(orGreaterExactChance); // Chance of getting desired successes or greater
-        orLessExactChance *= orLessDeck.getcombination(); // Chance of getting exactly desired successes
-        double orLessInclusiveChance = orLessDeck.orLess(orLessExactChance); // Chance of getting desired successes or less
+        Deck myDeck = new Deck(popSize, popSuccesses, sampleSize, desiredSuccesses);
 
-        lblExactChance.setText("Chance of exactly desired successes: " + orGreaterExactChance);
-        lblLess.setText("Chance of less than desired successes: " + (orLessInclusiveChance - orLessExactChance));
-        lblOrInclusiveLess.setText("Chance of desired successes or less: " + orLessInclusiveChance);
-        lblGreater.setText("Chance of greater than desired successes: " + (orGreaterInclusiveChance - orGreaterExactChance));
-        lblOrInclusiveGreater.setText("Chance of desired successes or greater: " + orGreaterInclusiveChance);
+        lblExactChance.setText("Chance of exactly desired successes: " + myDeck.getExactChance());
+        lblLess.setText("Chance of less than desired successes: " + (myDeck.getOrLessInclusiveChance() - myDeck.getExactChance()));
+        lblOrInclusiveLess.setText("Chance of desired successes or less: " + myDeck.getOrLessInclusiveChance());
+        lblGreater.setText("Chance of greater than desired successes: " + (myDeck.getOrGreaterInclusiveChance() - myDeck.getExactChance()));
+        lblOrInclusiveGreater.setText("Chance of desired successes or greater: " + myDeck.getOrGreaterInclusiveChance());
     }
     
     // Runs when the user enters invalid input
