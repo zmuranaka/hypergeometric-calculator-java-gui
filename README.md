@@ -56,5 +56,5 @@ http://www.skylit.com/javamethods/faqs/createjar.html
 ## Author:
 
 Zachary Muranaka  
-&nbsp;&nbsp;&nbsp;&nbsp;zacharymuranaka@mail.weber.edu  
+&nbsp;&nbsp;&nbsp;&nbsp;zmuranaka@gmail.com  
 &nbsp;&nbsp;&nbsp;&nbsp;https://zmuranaka.github.io
